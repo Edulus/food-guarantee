@@ -2,41 +2,440 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A Food Guarantee for Canada</title>
 <meta name="description" content="A policy white paper proposing the Three Layer Coordinated Price Guarantee for basic food in Canada, by Edward Yersh.">
-<style>
-:root{--ink:#1d1d1f;--green:#1f3a2e;--muted:#5a6b62;--line:#d6e0da;--bg:#fbfcfb}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif}
-main{max-width:720px;margin:0 auto;padding:56px 20px 72px}
-.kicker{font:600 12px/1 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
-h1{font:700 40px/1.12 'Helvetica Neue',Arial,sans-serif;color:var(--green);margin:12px 0 8px}
-.sub{font:20px/1.35 'Helvetica Neue',Arial,sans-serif;color:#3d5a4c;margin:0 0 20px}
-.by{color:var(--muted);margin-bottom:28px}
-.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font:600 16px Arial,sans-serif;padding:12px 20px;border-radius:6px;margin-right:12px}
-.link{font:16px Arial,sans-serif;color:var(--green)}
-h2{font:700 21px 'Helvetica Neue',Arial,sans-serif;color:var(--green);margin:40px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--line)}
-ol{padding-left:22px}li{margin-bottom:8px}
-footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font:14px/1.5 Arial,sans-serif;color:var(--muted)}
-footer a{color:var(--green)}
-@media(max-width:520px){h1{font-size:31px}.btn{display:block;text-align:center;margin:0 0 12px}}
+<meta property="og:title" content="A Food Guarantee for Canada"><meta property="og:description" content="The Three Layer Coordinated Price Guarantee: a white paper by Edward Yersh.">
+<style>:root{--bg:#fbfbf9;--surface:#ffffff;--ink:#1b1c1a;--ink2:#4c514d;--muted:#6b716c;--line:#dde3de;--accent:#1f4d3a;--accent2:#2f6b52;--hero:#eef3ef;
+--c1:#2a78d6;--c2:#eb6834;--c3:#1baf7a;--c4:#eda100;--grid:#e6e9e6}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){--bg:#141513;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#9a9c94;--line:#33362f;--accent:#8fd0b0;--accent2:#7cc3a1;--hero:#1c211e;
+--c1:#3987e5;--c2:#d95926;--c3:#199e70;--c4:#c98500;--grid:#2c2e2a}}
+:root[data-theme="dark"]{--bg:#141513;--surface:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--muted:#9a9c94;--line:#33362f;--accent:#8fd0b0;--accent2:#7cc3a1;--hero:#1c211e;--c1:#3987e5;--c2:#d95926;--c3:#199e70;--c4:#c98500;--grid:#2c2e2a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,'Times New Roman',serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a{color:var(--accent2)}
+.hero{background:var(--hero);border-bottom:1px solid var(--line);padding:56px 0 36px}
+.kicker{font:600 12px/1 system-ui,Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.hero h1{font:700 clamp(32px,5vw,50px)/1.08 system-ui,'Helvetica Neue',Arial,sans-serif;color:var(--accent);margin:12px 0 8px}
+.sub{font:clamp(18px,2.4vw,22px)/1.35 system-ui,Arial,sans-serif;color:var(--ink2);margin:0 0 14px}
+.by{color:var(--muted);margin:0 0 22px;font-size:16px}
+.cta{margin:0 0 30px}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);text-decoration:none;font:600 15px system-ui,Arial,sans-serif;padding:11px 18px;border-radius:6px;margin-right:14px}
+.ghost{font:600 15px system-ui,Arial,sans-serif;text-decoration:none}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.num{font:700 32px/1 system-ui,Arial,sans-serif;color:var(--accent)}
+.lbl{font:14px/1.4 system-ui,Arial,sans-serif;color:var(--ink2);margin-top:8px}
+.grid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;padding-top:36px}
+.toc{position:sticky;top:20px;align-self:start;font:14px/1.4 system-ui,Arial,sans-serif;max-height:calc(100vh - 40px);overflow:auto}
+.toch{font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-size:12px;margin-bottom:8px}
+.toc ol{list-style:none;padding:0;margin:0}.toc li{margin:0 0 8px}.toc a{text-decoration:none;color:var(--ink2)}.toc a:hover{color:var(--accent)}
+.paper{max-width:720px;padding-bottom:80px}
+.paper h2{font:700 25px/1.25 system-ui,Arial,sans-serif;color:var(--accent);margin:48px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line);scroll-margin-top:16px}
+.paper h3{font:700 19px/1.3 system-ui,Arial,sans-serif;margin:30px 0 8px;scroll-margin-top:16px}
+.paper p{margin:0 0 14px}.paper li{margin-bottom:6px}
+sup.fn{font:600 11px system-ui,Arial,sans-serif;line-height:0;margin-left:1px}sup.fn a{text-decoration:none;padding:0 2px;border-radius:3px;background:color-mix(in srgb,var(--accent2) 14%,transparent)}
+.tw{overflow-x:auto;margin:16px 0 22px}
+table{border-collapse:collapse;width:100%;font:14.5px/1.45 system-ui,Arial,sans-serif;background:var(--surface)}
+th{text-align:left;background:var(--accent);color:var(--bg);padding:8px 10px;font-weight:600}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--accent2) 5%,var(--surface))}
+.viz{margin:26px 0 30px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.viz figcaption{font:16px system-ui,Arial,sans-serif;margin-bottom:14px}
+.src{font:13px/1.45 system-ui,Arial,sans-serif;color:var(--muted);margin:12px 0 0!important}
+.hbars{display:grid;gap:12px}
+.hrow{display:grid;grid-template-columns:110px 1fr 150px;align-items:center;gap:12px;font:14px system-ui,Arial,sans-serif;outline:none}
+.hl{color:var(--ink2)}.hv{color:var(--ink)}
+.htrack{height:26px}.hbar{height:100%;background:var(--c1);border-radius:0 4px 4px 0}
+.hrow.hot .hbar,.hrow:focus .hbar{filter:brightness(1.12)}
+.layers{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:10px}
+.layer{border:1px solid var(--line);border-radius:10px;padding:14px;position:relative;font:14px/1.45 system-ui,Arial,sans-serif}
+.layer h4{margin:4px 0 6px;font-size:17px;color:var(--accent)}.layer p{margin:0 0 10px;color:var(--ink2)}
+.ln{width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-weight:700}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--muted)}
+.arrow{align-self:center;font:24px system-ui;color:var(--muted)}
+.stack{display:flex;gap:2px;height:34px;margin-bottom:12px}
+.seg{border-radius:0;outline:none}.seg:last-child{border-radius:0 4px 4px 0}
+.s1,.k.s1,.c1{background:var(--c1);fill:var(--c1)}.s2,.k.s2,.c2{background:var(--c2);fill:var(--c2)}.s3,.k.s3,.c3{background:var(--c3);fill:var(--c3)}.c4,.k.c4{background:var(--c4);fill:var(--c4)}
+.seg.hot,rect.hot{opacity:.82}
+.legend{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font:13.5px system-ui,Arial,sans-serif;color:var(--ink2)}
+.legend li{margin:0}.k{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.costsvg{width:100%;height:auto;font-family:system-ui,Arial,sans-serif}
+.costsvg .grid{stroke:var(--grid);stroke-width:1}.costsvg .ax{fill:var(--muted);font-size:12px}.costsvg .tot{fill:var(--ink);font-size:13px;font-weight:700}
+.costsvg .ref{stroke:var(--ink2);stroke-width:1.5;stroke-dasharray:5 4}
+.costsvg rect{outline:none}
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line);font:14.5px/1.45 system-ui,Arial,sans-serif}
+.timeline li{position:relative;margin:0 0 14px;padding-left:10px;color:var(--ink2)}
+.timeline li::before{content:"";position:absolute;left:-25px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.timeline b{display:block;color:var(--ink)}
+.notes{font:14px/1.5 system-ui,Arial,sans-serif;padding-left:24px;color:var(--ink2)}
+.notes li{margin-bottom:8px;scroll-margin-top:16px}.notes li:target{background:color-mix(in srgb,var(--accent2) 14%,transparent);border-radius:4px}
+.notes a{word-break:break-word}.back{text-decoration:none;margin-left:4px}
+.foot{font:14px system-ui,Arial,sans-serif;color:var(--muted);margin-top:30px}
+#tip{position:fixed;pointer-events:none;opacity:0;background:var(--ink);color:var(--bg);font:13px system-ui,Arial,sans-serif;padding:6px 9px;border-radius:6px;transition:opacity .12s;z-index:9;white-space:nowrap}
+@media (max-width:900px){.grid{grid-template-columns:1fr;gap:0}.toc{position:static;max-height:none;border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;background:var(--surface)}.stats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.layers{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}.hrow{grid-template-columns:90px 1fr;}.hv{grid-column:2}.stats{grid-template-columns:1fr 1fr}.num{font-size:26px}}
+
+.k.dash{background:none;border-top:2px dashed var(--ink2);border-radius:0;height:0;width:16px;vertical-align:3px}
 </style></head>
-<body><main>
+<body>
+<header class="hero"><div class="wrap">
 <div class="kicker">A policy white paper</div>
 <h1>A Food Guarantee for Canada</h1>
 <p class="sub">The Three Layer Coordinated Price Guarantee</p>
-<p class="by">Edward Yersh, BA, McGill University · November 2026</p>
-<p><a class="btn" href="A-Food-Guarantee-for-Canada.pdf">Download the PDF</a><a class="link" href="white-paper.md">Read the text with notes</a></p>
+<p class="by">Edward Yersh, BA, McGill University &middot; November 2026</p>
+<p class="cta"><a class="btn" href="A-Food-Guarantee-for-Canada.pdf">Download the PDF</a><a class="ghost" href="#notes">35 sources</a></p>
 
-<h2>Summary</h2>
-<p>About 9.8 million people in Canada live in households that struggle to afford food. Food insecurity has many causes, and the price of basic food is one that public policy can address directly.</p>
-<p>This paper proposes guaranteeing every household access to a basic version of a short list of nutritious staples that Canada produces in abundance, such as flour, oats, beans, lentils, potatoes, carrots, apples, eggs, milk and canola oil. Premium, branded and specialty versions, and everything else in the store, would stay at market prices.</p>
+<div class="stats">
+  <div class="stat"><div class="num">9.8M</div><div class="lbl">people in food-insecure households, about 1 in 4<sup class="fn"><a href="#n4">4</a></sup></div></div>
+  <div class="stat"><div class="num">31%</div><div class="lbl">of survey respondents ate less or skipped meals due to grocery costs, Sept. 2026<sup class="fn"><a href="#n5">5</a></sup></div></div>
+  <div class="stat"><div class="num">2.2M</div><div class="lbl">food bank visits in March 2025, double 2019<sup class="fn"><a href="#n6">6</a></sup></div></div>
+  <div class="stat"><div class="num">1 in 5</div><div class="lbl">food bank clients has a job<sup class="fn"><a href="#n6">6</a></sup></div></div>
+</div>
+</div></header>
+<div class="wrap grid">
+<nav class="toc" aria-label="Contents"><div class="toch">Contents</div><ol><li><a href="#executive-summary">Executive summary</a></li><li><a href="#1-introduction-why-a-food-guarantee">1. Introduction: why a food guarantee</a></li><li><a href="#2-the-problem">2. The problem</a></li><li><a href="#3-the-current-federal-response">3. The current federal response</a></li><li><a href="#4-the-proposal-the-three-layer-coordinated-price-guarantee">4. The proposal: the Three Layer Coordinated Price Guarantee</a></li><li><a href="#5-lessons-from-experience">5. Lessons from experience</a></li><li><a href="#6-what-it-would-cost">6. What it would cost</a></li><li><a href="#7-implementation">7. Implementation</a></li><li><a href="#8-conclusion">8. Conclusion</a></li><li><a href="#appendix-a-costing-method-and-assumptions">Appendix A: Costing method and assumptions</a></li><li><a href="#notes">Notes</a></li></ol></nav>
+<main class="paper">
+<h2 id="executive-summary">Executive summary</h2>
+<p><strong>The problem.</strong> About 9.8 million people in Canada, nearly one in four, live in households that struggle to afford food. Food banks recorded about 2.2 million visits in a single month in 2025, double the number in 2019, and nearly one in five clients has a job. Food is abundant in Canada, yet many households struggle to buy it. The causes are many, and the price of basic food is one that policy can address directly.</p>
+<p><strong>The current response.</strong> The federal National Food Security Strategy, launched in June 2026, invests in grocery competition, food processing and year-round growing, makes school food permanent, and adds a cash grocery benefit. It sets no price for any food, gives farmers no price floor, ties no support to the real cost of eating, and sets no target for reducing food insecurity.</p>
+<p><strong>The proposal.</strong> Canada should guarantee every household access to a basic, nutritionally complete basket of staple foods through three coordinated layers:</p>
 <ol>
-<li><strong>A viable price for producers.</strong> Farmers growing these staples would receive a minimum price, set each year by an independent body before planting.</li>
-<li><strong>An affordable price in stores.</strong> Large grocery chains would sell the basic basket at a published maximum price, with government paying the audited gap between that price and an efficient supply cost.</li>
-<li><strong>Enough money to buy food.</strong> Households whose incomes remain too low would receive a monthly supplement sized to the regional cost of the basket.</li>
+<li><strong>A viable price for producers.</strong> Farmers growing basket staples receive a minimum price, set annually by an independent body and paid mainly as a top-up when market prices fall below it. Volumes are capped nationally and per farm.</li>
+<li><strong>An affordable price in stores.</strong> Large grocery chains must stock the basket at published maximum prices. Government pays the audited gap between that price and an efficient supply cost, including a fair margin.</li>
+<li><strong>Enough money to buy food.</strong> Households whose incomes remain too low receive a monthly food supplement sized to the regional cost of the basket.</li>
 </ol>
-<p>The paper reviews similar policies in Europe, India, Mexico, Malaysia, Hungary and Canada, sets out the ways they have failed, and proposes safeguards against each. Rough estimates put the annual public cost between $3.5 billion and $36 billion, with every assumption stated so readers can test it.</p>
-
-<h2>Comments</h2>
-<p>Comments, corrections and criticism are welcome. A proposal like this improves when people with different knowledge push on it.</p>
-
-<footer>Edward Yersh is a railyard worker and essayist in Montreal. He publishes on Substack as Mister Edwards.</footer>
-</main></body></html>
+<p>The basket is limited to staples Canada produces in abundance, such as wheat, oats, beans, lentils, potatoes, apples, eggs and milk. The rest of the food market is untouched.</p>
+<p><strong>Lessons applied.</strong> Europe's butter mountains, India's grain surpluses, Mexico's Segalmex fraud, Hungary's empty shelves and Nutrition North's leaky subsidies each show a way food guarantees fail. This proposal answers each one with a specific safeguard.</p>
+<p><strong>Cost.</strong> Illustrative estimates put the annual public cost between $3.5 billion and $36.3 billion, with a middle estimate of $14.5 billion, or about $347 per Canadian. The largest uncertainty is how much ordinary shopping would shift to capped products. Pilots in a city, a smaller community and a remote region would measure that before national rollout.</p>
+<p><strong>Recommendation.</strong> Ottawa should launch pilots, set a public target for reducing household food insecurity, and establish an independent body to set prices and publish all costs.</p>
+<h2 id="1-introduction-why-a-food-guarantee">1. Introduction: why a food guarantee</h2>
+<p>Government has a responsibility to ensure the welfare of its people. Access to the essentials of life is a human right, and adequate food is among the most fundamental. The Universal Declaration of Human Rights lists food as part of an adequate standard of living.<sup class="fn"><a href="#n1" id="r1-1" title="United Nations, Universal Declaration of Human Rights, Article 25.">1</a></sup> The International Covenant on Economic, Social and Cultural Rights makes that a binding obligation,<sup class="fn"><a href="#n2" id="r2-2" title="United Nations Office of the High Commissioner for Human Rights, International Covenant on Economic, Social and Cultural Rights, Article 11.">2</a></sup> and Canada became a party to it in 1976.<sup class="fn"><a href="#n3" id="r3-3" title="Food and Agriculture Organization, Right to food around the globe: Canada.">3</a></sup> A society with Canada's wealth and productive capacity should guarantee that everyone has enough to eat.</p>
+<p>The free market cannot be relied on to meet these needs consistently. Businesses respond to purchasing power, while human needs persist whether people can pay or not. Homelessness makes that gap visible in housing. Food insecurity reveals it at the grocery checkout. Food can be abundant and still remain beyond a household's reach.</p>
+<p>Just as governments guarantee education to every child, they should guarantee access to a basic, nutritionally complete food basket for every citizen. Carefully designed market intervention can make that commitment practical, supporting the people who produce food, ensuring affordable availability in stores, and giving households the means to buy it.</p>
+<p>This paper proposes how to do that. Section 2 sets out the problem. Section 3 reviews the current federal response. Section 4 describes the proposal. Section 5 examines how similar policies have worked and failed elsewhere, and the safeguards this design adopts. Section 6 estimates the cost. Section 7 sets out a path to implementation.</p>
+<h2 id="2-the-problem">2. The problem</h2>
+<p>Statistics Canada's 2024 Canadian Income Survey reported that approximately 9.8 million people, or 24 per cent of Canadians, lived in households experiencing some form of food insecurity. The food-insecurity interviews were conducted in 2025 and released alongside 2024 income estimates.<sup class="fn"><a href="#n4" id="r4-4" title="Statistics Canada, Canadian Income Survey, 2024, April 29, 2026.">4</a></sup></p>
+<p>Newer survey data point the same way. In a Salvation Army survey released in November 2026, 31 per cent of respondents said they had eaten less or skipped meals because of grocery costs, up from 27 per cent a year earlier. Among people aged 18 to 34, the figure was 41 per cent. The survey used an online panel, so it has no margin of error, but its direction matches the official data.<sup class="fn"><a href="#n5" id="r5-5" title="The Salvation Army, Salvation Army report finds nearly one in three Canadians skipping meals as food insecurity hits four-year high, November 3, 2026. Survey of 1,525 adults by Edelman Data and Intelligence through the Angus Reid Forum, September 11 to 18, 2026. See also The Canadian Press, More Canadians report skipping meals because they can&#x27;t afford groceries: survey, November 3, 2026.">5</a></sup></p>
+<p>The emergency system shows the same strain. Food banks recorded about 2.2 million visits in March 2025 alone, double the number in March 2019. Nearly one in five food bank clients now has a job, up from about one in eight in 2019.<sup class="fn"><a href="#n6" id="r6-6" title="Food Banks Canada, Canada&#x27;s 2025 HungerCount shows the cost of inaction.">6</a></sup> Work no longer reliably protects a household from hunger.</p>
+<p>Half of the Salvation Army's respondents had drawn down savings to cover basic needs, and 40 per cent had used credit or taken on debt.<sup class="fn"><a href="#n5" id="r5-7" title="The Salvation Army, Salvation Army report finds nearly one in three Canadians skipping meals as food insecurity hits four-year high, November 3, 2026. Survey of 1,525 adults by Edelman Data and Intelligence through the Angus Reid Forum, September 11 to 18, 2026. See also The Canadian Press, More Canadians report skipping meals because they can&#x27;t afford groceries: survey, November 3, 2026.">5</a></sup> Behind these numbers are households managing an ordinary necessity through anxiety, compromise and missed meals.</p>
+<p>Food banks were built for emergencies. They run on donations and volunteer labour, and they cannot carry a quarter of the country. A problem this size needs a public answer.</p><figure class="viz"><figcaption><strong>Food bank visits in a single month</strong></figcaption><div class="hbars"><div class="hrow" tabindex="0" data-tip="March 2019: about 1.1 million"><div class="hl">March 2019</div><div class="htrack"><div class="hbar" style="width:50.1%"></div></div><div class="hv">about 1.1 million</div></div><div class="hrow" tabindex="0" data-tip="March 2025: about 2.2 million"><div class="hl">March 2025</div><div class="htrack"><div class="hbar" style="width:100.0%"></div></div><div class="hv">about 2.2 million</div></div></div><p class="src">Source: Food Banks Canada, HungerCount 2025.<sup class="fn"><a href="#n6">6</a></sup> The 2019 figure is derived from the reported 99.4% increase.</p></figure>
+<h2 id="3-the-current-federal-response">3. The current federal response</h2>
+<h3 id="31-the-national-food-security-strategy">3.1 The National Food Security Strategy</h3>
+<p>In June 2026 the federal government launched Canada's first National Food Security Strategy, with more than $3 billion in spending over ten years.<sup class="fn"><a href="#n7" id="r7-8" title="Prime Minister of Canada, Prime Minister Carney launches National Food Security Strategy, June 11, 2026.">7</a></sup> It has real strengths:</p>
+<ul>
+<li>It funds food hubs so independent grocers can buy and move products without relying on the large chains, and gives the Competition Bureau and Competition Tribunal nearly $130 million to pursue anti-competitive practices.</li>
+<li>It invests in food processing and in year-round greenhouse production.</li>
+<li>It makes the National School Food Program permanent.</li>
+<li>It introduces the Canada Groceries and Essentials Benefit, worth up to $1,890 this year for a family of four and about $1,400 a year for the four years after.</li>
+</ul>
+<h3 id="32-what-the-strategy-leaves-out">3.2 What the strategy leaves out</h3>
+<p><strong>It sets no price for any food.</strong> Its main tools for lowering prices are competition and new supply. Both may help over years. Neither guarantees what a bag of flour or a kilogram of lentils will cost next month. The price of basic food remains entirely up to the market.</p>
+<p><strong>It gives farmers no price floor.</strong> Its support for producers goes to processing plants, equipment and greenhouses. A farmer growing lentils or potatoes still plants each spring without knowing what the crop will earn.</p>
+<p><strong>Its benefit is not tied to the cost of food.</strong> The grocery benefit is a fixed cash amount, and it falls after the first year. It is not linked to what a nutritious basket costs in a household's region, so its value will erode whenever food prices rise faster than the benefit.</p>
+<p><strong>It sets no target.</strong> The announcement commits to no reduction in food insecurity and no date to reach one. Without a target, there is no way to judge whether the money worked.</p>
+<p><strong>It leaves the North for later.</strong> It promises to reform Nutrition North but offers no details or timeline, even though that program's problems have been documented for more than a decade.<sup class="fn"><a href="#n8" id="r8-9" title="Office of the Auditor General of Canada, Opening Statement on Nutrition North Canada, 2014 Fall Report.">8</a></sup></p>
+<p><strong>It barely touches the emergency system.</strong> Food banks and community food organizations receive $20 million,<sup class="fn"><a href="#n7" id="r7-10" title="Prime Minister of Canada, Prime Minister Carney launches National Food Security Strategy, June 11, 2026.">7</a></sup> at a time when food banks recorded about 2.2 million visits in a single month.</p>
+<p>The permanent school food program shows that Ottawa already accepts a basic principle: some food should be guaranteed. This proposal extends that principle from children's lunches to a basic basket for every household, and adds what the strategy lacks: a guaranteed shelf price, a stable return for farmers, support tied to the real cost of food, and a measurable target.</p>
+<h2 id="4-the-proposal-the-three-layer-coordinated-price-guarantee">4. The proposal: the Three Layer Coordinated Price Guarantee</h2>
+<p>Canada should establish a Three Layer Coordinated Price Guarantee. Producers would receive a minimum price reviewed annually. Large grocery chains would be required to keep a short list of staple foods available at regulated maximum prices, with subsidies where necessary. Households whose incomes remain insufficient would receive a food-buying supplement.</p>
+<p>Each layer addresses a different part of the same problem. Farmers need a viable income to keep producing. Retailers need to cover the reasonable costs of supplying food. People need enough purchasing power to eat. Connecting these obligations makes each commitment credible, because a gap in any one layer would undo the other two.</p>
+<figure class="viz diagram" aria-label="Diagram of the three layers">
+<figcaption><strong>How the three layers connect</strong></figcaption>
+<div class="layers">
+  <div class="layer"><div class="ln">1</div><h4>Farm</h4><p>Minimum price for basket staples, set before planting. Paid mainly as a top-up when market prices fall below it.</p><span class="tag">Capped per farm</span></div>
+  <div class="arrow" aria-hidden="true">&rarr;</div>
+  <div class="layer"><div class="ln">2</div><h4>Store</h4><p>Large chains sell the basic basket at a published maximum price. Government pays the audited cost gap.</p><span class="tag">Mandatory stocking</span></div>
+  <div class="arrow" aria-hidden="true">&rarr;</div>
+  <div class="layer"><div class="ln">3</div><h4>Household</h4><p>Monthly supplement sized to the regional cost of the basket, for households whose incomes remain too low.</p><span class="tag">Tied to food costs</span></div>
+</div>
+<p class="src">One independent public body sets the farm floor and the shelf cap using the same cost data, and publishes all accounts.</p>
+</figure>
+<h3 id="41-the-basket">4.1 The basket</h3>
+<p>The guarantee would cover a short list of staple foods. It would leave the rest of the food market alone. Within each staple, the guarantee would apply only to a basic version meeting a published standard, such as a standard bag of all-purpose flour or a dozen large eggs. Organic, premium, branded and specialty versions of the same foods would remain at market prices, as would prepared foods, meat, snacks and everything else in the store.</p>
+<p>The basket would meet two tests. Every item must be producible in abundance at low cost, and the basket as a whole must be nutritionally complete. Canada can meet both tests with foods it already grows or processes in large volumes:</p>
+<ul>
+<li><strong>Grains:</strong> enriched wheat flour, bread and pasta, oats, corn and rice, for energy, fibre and B vitamins. Canadian white flour must by law be enriched with iron, folic acid and several B vitamins.<sup class="fn"><a href="#n9" id="r9-11" title="Canadian Food Inspection Agency, Prohibition against the sale of unenriched white flour and products containing unenriched flour.">9</a></sup></li>
+<li><strong>Legumes:</strong> dried beans, lentils and peas, for protein, iron and fibre. Canada is the world's largest exporter of lentils and dry peas and the third-largest producer of pulses.<sup class="fn"><a href="#n10" id="r10-12" title="Statistics Canada, Eh Sayers, Episode 35: Canada&#x27;s pulse production.">10</a></sup></li>
+<li><strong>Vegetables:</strong> potatoes, carrots, cabbage and onions, with frozen vegetables in winter, for vitamin C, vitamin A and potassium.</li>
+<li><strong>Fruit:</strong> apples and other storable fruit, for fibre and vitamin C.</li>
+<li><strong>Eggs and milk:</strong> for complete protein, vitamin B12 and calcium. Canadian milk must by law be fortified with vitamin D, and the required level was roughly doubled in recent years.<sup class="fn"><a href="#n11" id="r11-13" title="Health Canada, Fortified foods: Canada&#x27;s approach to fortification.">11</a></sup> A fortified soy drink would be the plant-based substitute.</li>
+<li><strong>Canola oil:</strong> for essential fats, including the plant-based omega-3 fatty acid, and needed energy.<sup class="fn"><a href="#n12" id="r12-14" title="Canola Council of Canada, Canola oil fact sheet.">12</a></sup></li>
+<li><strong>Iodized salt:</strong> for iodine.</li>
+</ul>
+<p>Each group covers nutrients the others lack. Canada's food guide notes that eating a variety of plant proteins, such as grains and legumes, helps provide all essential amino acids. It also notes that vitamin B12 is found naturally only in animal foods, which is why eggs, milk or a fortified soy drink are part of the basket.<sup class="fn"><a href="#n13" id="r13-15" title="Health Canada, Canada&#x27;s food guide: Considerations for vegetarian diets.">13</a></sup> Fortified milk adds vitamin D and calcium. Nutrition experts would set quantities so that the full basket meets Canada's dietary reference intakes for each household member, using Health Canada's National Nutritious Food Basket as a reference point.<sup class="fn"><a href="#n14" id="r14-16" title="Health Canada, National Nutritious Food Basket.">14</a></sup> Participating communities would help determine regional variations and cultural substitutions, provided each substitute meets the same nutritional standard.</p>
+<p>Keeping the list short is what makes the guarantee workable. Staples like these are already produced in large volumes, most of them in Canada, and most keep for months in ordinary storage. That makes stable prices, reliable stock levels and accurate cost reviews far easier to achieve than they would be across the whole grocery aisle. Imported staples such as rice would be covered through supply contracts at the retail and wholesale level, with the producer guarantee applying to Canadian crops.</p>
+<h3 id="42-layer-one-a-viable-price-for-producers">4.2 Layer one: a viable price for producers</h3>
+<p>The first layer would establish a dependable minimum return for participating producers supplying the basket. An independent public body would review prices annually, using representative production costs, reasonable compensation for labour, and a sustainable return on investment. Prices and eligible quantities would be announced before planting.</p>
+<p>The guarantee would be paid mainly as a top-up: when the market price for an eligible crop falls below the floor, the producer receives the difference. Government would buy and store food directly only where a public reserve is needed. Top-up payments require fewer contracts, less handling and less storage, which leaves fewer places for money to leak.</p>
+<p>The guarantee would also be limited in two ways. It would cover only the national volume the basket needs, plus an appropriate reserve. And it would cap the volume any single farm can sell under the guarantee, so that support reaches small and mid-sized producers in every region instead of concentrating on the largest operations.</p>
+<h3 id="43-layer-two-an-affordable-price-in-grocery-stores">4.3 Layer two: an affordable price in grocery stores</h3>
+<p>The second layer would make affordable availability an obligation for large grocery chains. A chain operating above a defined size would have to stock qualifying basic foods at or below published maximum prices. Customers could buy the guaranteed products individually. Access would require no special membership, promotional coupon or bulk purchase.</p>
+<p>Availability would be part of the obligation. A low shelf price achieves little when the shelf is empty. Stores would need reasonable stock levels, clear labels and an equivalent substitute at the guaranteed price when an item runs out. Repeated failure would trigger corrective orders and financial penalties. Smaller independent stores could participate through simpler agreements, shared purchasing and administrative support.</p>
+<p>Retail prices would have to account for the whole supply chain. Wheat becomes flour and bread through processing, energy, labour, transport and storage. A producer guarantee alone cannot set an affordable shelf price.</p>
+<p>Where the regulated selling price falls below an independently assessed efficient supply cost, government would reimburse the difference, including a reasonable retail margin. Claims would depend on verified sales and audited costs. Benchmarks would account for regional conditions and prevent retailers or related suppliers from enlarging the subsidy through inflated internal charges. If costs fell, reimbursement would fall too. The basket would be sold at cost plus a fair margin, with no room for excess profit.</p>
+<p>The two layers are linked. A higher producer floor raises the cost of supplying the basket, which raises the subsidy needed to hold the shelf price. Setting both prices through the same independent body, using the same cost data, keeps that relationship visible and lets the public see what each decision costs.</p>
+<h3 id="44-layer-three-enough-money-to-buy-food">4.4 Layer three: enough money to buy food</h3>
+<p>The third layer would address the gap that remains between affordable prices and inadequate incomes. A household can face reasonable grocery prices and still lack the money to buy enough food after paying rent, electricity and other necessities.</p>
+<p>A monthly food-buying supplement would reflect household size, income and the regional cost of the guaranteed basket. It would decline gradually as income rose. People facing a sudden loss of income would need a way to get help without waiting for the next tax return. Delivery should use ordinary payment systems, offer accessible alternatives, and allow people to shop without publicly identifying themselves as benefit recipients.</p>
+<p>Canada could choose a restricted food credit or an income supplement. That decision should weigh administrative cost, privacy and household autonomy. Either approach must add purchasing power without reducing other income supports by an equivalent amount. The top-up portion of the Canada Groceries and Essentials Benefit could be folded into this supplement, so that government does not pay twice for the same purpose.</p>
+<h3 id="45-how-the-layers-fit-together">4.5 How the layers fit together</h3>
+<p>The three layers would have separate accounts and a common objective. Suppose, purely for illustration, a basket costs $50 to supply efficiently, including a reasonable retail margin. Its regulated price might be $40, requiring a $10 supply subsidy. A qualifying household might receive a $15 food credit, leaving $25 to pay from its other income. Any separate producer top-ups would also appear in the public accounts. The example illustrates the mechanism. Section 6 estimates actual costs.</p>
+<figure class="viz"><figcaption><strong>Illustrative example: who pays for a $50 basket</strong></figcaption>
+<div class="stack" role="img" aria-label="Supply subsidy $10, food credit $15, household pays $25">
+  <div class="seg s1" style="flex:10" tabindex="0" data-tip="Supply subsidy (government): $10"></div>
+  <div class="seg s2" style="flex:15" tabindex="0" data-tip="Food credit (government): $15"></div>
+  <div class="seg s3" style="flex:25" tabindex="0" data-tip="Household pays: $25"></div>
+</div>
+<ul class="legend"><li><i class="k s1"></i>Supply subsidy, $10</li><li><i class="k s2"></i>Food credit for a qualifying household, $15</li><li><i class="k s3"></i>Paid by the household, $25</li></ul>
+<p class="src">Illustration of the mechanism only. Shelf price: $40. Efficient supply cost: $50.</p>
+</figure>
+<p>Most of the shelf-price reduction comes from public money: the cap sets the price, and the subsidy pays the difference. Limiting margins, rejecting padded costs, selling plain unbranded products and stabilizing farm prices reduce the underlying cost, but the guarantee is mainly paid for by taxpayers. This paper says so plainly.</p>
+<h2 id="5-lessons-from-experience">5. Lessons from experience</h2>
+<h3 id="51-how-this-has-been-tried-before">5.1 How this has been tried before</h3>
+<p>Governments have guaranteed food prices for a long time, and the record is mixed.</p>
+<figure class="viz"><figcaption><strong>Food price guarantees: a short timeline</strong></figcaption>
+<ol class="timeline">
+<li><b>1965 to 1998</b> Mexico's state agency CONASUPO buys basic crops at guaranteed prices.<sup class="fn"><a href="#n18">18</a></sup></li>
+<li><b>1965</b> India sets up its Agricultural Prices Commission to advise on minimum support prices.<sup class="fn"><a href="#n16">16</a></sup></li>
+<li><b>1970s to 1980s</b> Europe's guaranteed dairy prices leave over a million tonnes of butter and milk powder in storage.<sup class="fn"><a href="#n15">15</a></sup></li>
+<li><b>1984</b> Europe introduces milk quotas; they last until 2015.<sup class="fn"><a href="#n15">15</a></sup></li>
+<li><b>2011</b> Canada launches Nutrition North.<sup class="fn"><a href="#n29">29</a></sup></li>
+<li><b>2014</b> Canada's Auditor General finds Nutrition North had not verified that subsidies reached shoppers.<sup class="fn"><a href="#n8">8</a></sup></li>
+<li><b>2019</b> Mexico creates Segalmex; auditors later find about 9.5 billion pesos lost.<sup class="fn"><a href="#n19">19</a></sup></li>
+<li><b>2020</b> India's grain stocks reach more than three times its reserve target.<sup class="fn"><a href="#n17">17</a></sup></li>
+<li><b>2022</b> Hungary caps staple prices without compensating stores; capped goods run short.<sup class="fn"><a href="#n28">28</a></sup></li>
+<li><b>2026</b> Canada launches its National Food Security Strategy.<sup class="fn"><a href="#n7">7</a></sup> Mexico renews PACIC, a voluntary 24-staple basket.<sup class="fn"><a href="#n23">23</a></sup></li>
+</ol></figure>
+<p><strong>Europe.</strong> After the Second World War, Europe set out to end food shortages. Under its Common Agricultural Policy, the European Community guaranteed a minimum price for dairy and other farm products and bought whatever farmers could not sell at that price. It worked too well. Production kept climbing until, by the late 1970s, it exceeded demand. By the 1970s and early 1980s, more than a million tonnes of butter and skimmed milk powder sat in public storage. The "butter mountain" became a symbol of the policy's excesses. In 1984 Europe introduced milk quotas to cap production and control public spending, and they stayed in place until 2015.<sup class="fn"><a href="#n15" id="r15-17" title="Agriland, Milk quotas to end within days, but why were they introduced?, March 25, 2015.">15</a></sup></p>
+<p><strong>India.</strong> India has run minimum support prices and public grain procurement since the mid-1960s. Its Agricultural Prices Commission was set up in 1965 to advise the government on farm prices.<sup class="fn"><a href="#n16" id="r16-18" title="Government of India, Indian Economic Service, Minimum Support Prices.">16</a></sup> The system helped make India self-sufficient in grain, but it also produced chronic oversupply. In April 2020, public stocks stood at 73.85 million tonnes, more than three times the official reserve target. India's own price commission blamed open-ended procurement and said it had discouraged farmers from growing a wider range of crops.<sup class="fn"><a href="#n17" id="r17-19" title="Down To Earth, Bumper kharif amid excess stock? Is India staring at hard agri decisions, September 22, 2020, citing the Commission for Agricultural Costs and Prices.">17</a></sup></p>
+<p><strong>Mexico.</strong> From 1965 to 1998, Mexico's state agency CONASUPO bought basic crops at guaranteed prices well above world prices.<sup class="fn"><a href="#n18" id="r18-20" title="Jorge Miranda, Mexico&#x27;s new agricultural policy is Mexico&#x27;s old agricultural policy, Part I, Kluwer Regulating for Globalization, February 25, 2019.">18</a></sup> In January 2019 the government revived the approach, creating Segalmex by decree to buy food at guaranteed prices for national producers.<sup class="fn"><a href="#n18" id="r18-21" title="Jorge Miranda, Mexico&#x27;s new agricultural policy is Mexico&#x27;s old agricultural policy, Part I, Kluwer Regulating for Globalization, February 25, 2019.">18</a></sup> Segalmex also took over the Diconsa stores and the Liconsa milk program. Federal auditors later found that about 9.5 billion pesos had been lost through purchases at inflated prices and contracts with shell companies. More than 100 criminal complaints followed.<sup class="fn"><a href="#n19" id="r19-22" title="Expansión Política, Fraude en Segalmex fue de 9,500 mdp: SFP, June 29, 2023.">19</a></sup></p>
+<h3 id="52-how-it-is-being-tried-now">5.2 How it is being tried now</h3>
+<p>Several countries are running parts of this proposal today.</p>
+<p><strong>India</strong> still sets minimum support prices every year for 22 crops, with public procurement particularly important for wheat and rice.<sup class="fn"><a href="#n20" id="r20-23" title="Government of India, Minimum Support Prices for All Crops, August 4, 2026.">20</a></sup> Grain bought at those prices is sold to low-income households through licensed Fair Price Shops, supported by public subsidies and dealer margins.<sup class="fn"><a href="#n21" id="r21-24" title="Government of India, Fair Price Shops and Food Subsidy.">21</a></sup></p>
+<p><strong>Mexico</strong> has kept guaranteed prices, now run by its agency Alimentación para el Bienestar. Corn, beans and milk qualify, but only for small producers with up to 5 hectares, and each producer can sell only a set amount under the guarantee.<sup class="fn"><a href="#n22" id="r22-25" title="Uno TV, Maíz, frijol y leche: así quedan los nuevos precios de garantía publicados por Sader, October 2025.">22</a></sup> Mexico also runs PACIC, an agreement with manufacturers and retailers including Walmart, Soriana, Oxxo and Costco to keep a basket of 24 staples at or below 910 pesos. The agreement is voluntary and relies on public pressure to hold.<sup class="fn"><a href="#n23" id="r23-26" title="Cultura Colectiva, PACIC 2026: 24 productos básicos a 910 pesos.">23</a></sup></p>
+<p><strong>Malaysia</strong> subsidizes approved cooking-oil producers and packers to make qualifying packet oil available at a controlled retail price.<sup class="fn"><a href="#n24" id="r24-27" title="Government of Malaysia, Cooking Oil Stabilization Scheme (COSS).">24</a></sup></p>
+<p><strong>Canada</strong> already has pieces in place. The dairy system includes an annual review of farmgate milk prices based on production costs and inflation.<sup class="fn"><a href="#n25" id="r25-28" title="Canadian Dairy Commission, 2026 increase to farmgate milk price aligned with inflation.">25</a></sup> Nutrition North pays subsidies to registered northern retailers, which are required to pass the full subsidy on to consumers.<sup class="fn"><a href="#n26" id="r26-29" title="Government of Canada, How Nutrition North Canada works.">26</a></sup> Mandatory fortification of flour and milk already uses regulation to improve the nutritional value of basic foods.</p>
+<p><strong>The United States'</strong> Supplemental Nutrition Assistance Program gives eligible households monthly benefits on an electronic card usable at authorized retailers.<sup class="fn"><a href="#n27" id="r27-30" title="US Department of Health and Human Services, Supplemental Nutrition Assistance Program.">27</a></sup></p>
+<p>Mexico comes closest to the full design, with a producer guarantee and a staples basket at a reference price. None of these programs connects all three layers under one independent body with one set of accounts.</p>
+<h3 id="53-how-it-has-gone-wrong">5.3 How it has gone wrong</h3>
+<p>The record points to seven recurring failures.</p>
+<p><strong>Surpluses.</strong> Europe and India both promised to buy everything farmers produced at the guaranteed price. Both ended up with stockpiles they could not use, at great cost.</p>
+<p><strong>Distorted farming.</strong> When a guarantee favours a few crops, farmers plant more of those crops. In India, procurement concentrated on rice and wheat in Punjab and Haryana, where groundwater has been badly depleted.<sup class="fn"><a href="#n17" id="r17-31" title="Down To Earth, Bumper kharif amid excess stock? Is India staring at hard agri decisions, September 22, 2020, citing the Commission for Agricultural Costs and Prices.">17</a></sup></p>
+<p><strong>Benefits flowing to the wrong farms.</strong> In India, more than 95 per cent of Punjab's paddy farmers sell into public procurement, against under 2 per cent in Bihar.<sup class="fn"><a href="#n17" id="r17-32" title="Down To Earth, Bumper kharif amid excess stock? Is India staring at hard agri decisions, September 22, 2020, citing the Commission for Agricultural Costs and Prices.">17</a></sup> A guarantee open to everyone tends to reward the regions and farms best placed to use it.</p>
+<p><strong>Corruption.</strong> Segalmex shows what happens when a public agency buys and sells large volumes of food with weak oversight.<sup class="fn"><a href="#n19" id="r19-33" title="Expansión Política, Fraude en Segalmex fue de 9,500 mdp: SFP, June 29, 2023.">19</a></sup></p>
+<p><strong>Price caps that empty the shelves.</strong> In 2022 Hungary capped the price of staples such as milk, eggs, sugar and potatoes without compensating retailers. Shelves emptied. Chains rationed milk and potatoes to one unit per visit, and uncapped alternatives rose sharply in price. By November food prices were up 49 per cent from a year earlier, and the central bank governor called for the caps to be removed immediately.<sup class="fn"><a href="#n28" id="r28-34" title="BNN Bloomberg, Orbán&#x27;s food price caps backfire for Hungarian holiday shoppers, December 2022.">28</a></sup></p>
+<p><strong>Subsidies that never reach the shopper.</strong> In 2014 Canada's Auditor General found that Nutrition North had not defined affordability and had not verified whether northern retailers were passing on the full subsidy.<sup class="fn"><a href="#n8" id="r8-35" title="Office of the Auditor General of Canada, Opening Statement on Nutrition North Canada, 2014 Fall Report.">8</a></sup> Later research estimated that in communities with more than one store, prices fell by only about 67 cents for each subsidy dollar, and that pass-through was weaker still in towns served by a single store.<sup class="fn"><a href="#n29" id="r29-36" title="University of Toronto Mississauga, Grocers fail to pass along full Nutrition North food subsidy to shoppers, study shows.">29</a></sup> The largest northern retailer disputes these findings and says independent audits confirm full pass-through.<sup class="fn"><a href="#n30" id="r30-37" title="Cabin Radio, North West Company defends use of Nutrition North funding.">30</a></sup> The dispute itself is the lesson: a requirement that cannot be checked will be argued over indefinitely.</p>
+<p><strong>Costs hidden in consumer prices.</strong> Critics of Canada's supply management system argue that it supports farm incomes partly by keeping consumer prices high. A June 2026 study by the Montreal Economic Institute, a market-oriented think tank, estimated the system costs consumers about $244 a year on average. It found the cost takes 1.25 per cent of disposable income from the poorest fifth of households, against 0.33 per cent for the richest fifth.<sup class="fn"><a href="#n31" id="r31-38" title="The Canadian Press via BNN Bloomberg, Supply management costs Canadians average of $244 per year, MEI study finds, June 18, 2026.">31</a></sup> Defenders of supply management dispute such estimates. Either way, shoppers pay for the support without seeing it.</p>
+<h3 id="54-safeguards-in-this-design">5.4 Safeguards in this design</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Failure</th>
+<th>Where it happened</th>
+<th>Safeguard in this proposal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Surpluses</td>
+<td>Europe, India</td>
+<td>Guarantee covers only the volume the basket needs, plus a reserve</td>
+</tr>
+<tr>
+<td>Distorted farming</td>
+<td>India</td>
+<td>Varied basket; volumes set by nutrition needs; annual review</td>
+</tr>
+<tr>
+<td>Benefits to the wrong farms</td>
+<td>India</td>
+<td>Per-farm volume cap, following Mexico</td>
+</tr>
+<tr>
+<td>Corruption</td>
+<td>Mexico</td>
+<td>Independent price-setting body; top-up payments instead of mass public buying; audited and published accounts</td>
+</tr>
+<tr>
+<td>Empty shelves</td>
+<td>Hungary</td>
+<td>Retailers paid the cost gap; mandatory stocking with penalties; substitutes required</td>
+</tr>
+<tr>
+<td>Subsidies kept by retailers</td>
+<td>Nutrition North</td>
+<td>Fixed, published shelf price; subsidy pays only the audited cost gap; open cost records</td>
+</tr>
+<tr>
+<td>Hidden costs</td>
+<td>Canadian supply management</td>
+<td>Producer support paid from public funds and recorded in public accounts</td>
+</tr>
+</tbody>
+</table></div>
+<p>Market concentration needs specific attention. Where one chain dominates a town or region, it has more room to inflate costs and less pressure to keep shelves stocked. In those places, cost benchmarks would be set from comparable regions, inspections would be more frequent, and government would be ready to fund a cooperative or public alternative.</p>
+<h2 id="6-what-it-would-cost">6. What it would cost</h2>
+<p>No one can price this program precisely before pilots produce real data. A rough range still shows its scale and what drives the cost. Appendix A sets out the full method and every assumption.</p>
+<p>The estimates keep two numbers apart. <strong>Total basket spending</strong> is the full cost of supplying every basket sold under the cap. Most of that is money households already spend on bread, milk, eggs and potatoes, and it is not new public spending. <strong>Public cost</strong> is what government actually pays, in four parts: producer top-ups, the retail subsidy, the household supplement and administration.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Per year</th>
+<th>Low</th>
+<th>Middle</th>
+<th>High</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total basket spending (not public cost)</td>
+<td>$15.6 billion</td>
+<td>$41.6 billion</td>
+<td>$78.0 billion</td>
+</tr>
+<tr>
+<td>Producer top-ups</td>
+<td>$0.1 billion</td>
+<td>$0.5 billion</td>
+<td>$2.0 billion</td>
+</tr>
+<tr>
+<td>Retail subsidy</td>
+<td>$1.6 billion</td>
+<td>$8.3 billion</td>
+<td>$23.4 billion</td>
+</tr>
+<tr>
+<td>Household supplement</td>
+<td>$1.8 billion</td>
+<td>$5.0 billion</td>
+<td>$8.9 billion</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>$0.1 billion</td>
+<td>$0.7 billion</td>
+<td>$2.1 billion</td>
+</tr>
+<tr>
+<td><strong>Total public cost</strong></td>
+<td><strong>$3.5 billion</strong></td>
+<td><strong>$14.5 billion</strong></td>
+<td><strong>$36.3 billion</strong></td>
+</tr>
+<tr>
+<td>Per Canadian, per year</td>
+<td>$84</td>
+<td>$347</td>
+<td>$869</td>
+</tr>
+</tbody>
+</table></div><figure class="viz"><figcaption><strong>Estimated annual public cost, by component</strong></figcaption><svg viewBox="0 0 640 300" class="costsvg" role="img" aria-label="Stacked bars of annual public cost by scenario"><line x1="56" x2="630" y1="260.0" y2="260.0" class="grid"/><text x="48" y="264.0" class="ax" text-anchor="end">$0B</text><line x1="56" x2="630" y1="200.0" y2="200.0" class="grid"/><text x="48" y="204.0" class="ax" text-anchor="end">$10B</text><line x1="56" x2="630" y1="140.0" y2="140.0" class="grid"/><text x="48" y="144.0" class="ax" text-anchor="end">$20B</text><line x1="56" x2="630" y1="80.0" y2="80.0" class="grid"/><text x="48" y="84.0" class="ax" text-anchor="end">$30B</text><line x1="56" x2="630" y1="20.0" y2="20.0" class="grid"/><text x="48" y="24.0" class="ax" text-anchor="end">$40B</text><rect x="96" y="259.4" width="90" height="0.8" rx="0" class="c1" tabindex="0" data-tip="Low: Producer top-ups $0.1B"/><rect x="96" y="249.8" width="90" height="7.6" rx="0" class="c2" tabindex="0" data-tip="Low: Retail subsidy $1.6B"/><rect x="96" y="239.0" width="90" height="8.8" rx="0" class="c3" tabindex="0" data-tip="Low: Household supplement $1.8B"/><rect x="96" y="238.4" width="90" height="0.8" rx="4" class="c4" tabindex="0" data-tip="Low: Administration $0.1B"/><text x="141.0" y="231.0" class="tot" text-anchor="middle">$3.5B</text><text x="141.0" y="280" class="ax" text-anchor="middle">Low</text><rect x="276" y="257.0" width="90" height="1.0" rx="0" class="c1" tabindex="0" data-tip="Middle: Producer top-ups $0.5B"/><rect x="276" y="207.2" width="90" height="47.8" rx="0" class="c2" tabindex="0" data-tip="Middle: Retail subsidy $8.3B"/><rect x="276" y="177.2" width="90" height="28.0" rx="0" class="c3" tabindex="0" data-tip="Middle: Household supplement $5.0B"/><rect x="276" y="173.0" width="90" height="2.2" rx="4" class="c4" tabindex="0" data-tip="Middle: Administration $0.7B"/><text x="321.0" y="165.0" class="tot" text-anchor="middle">$14.5B</text><text x="321.0" y="280" class="ax" text-anchor="middle">Middle</text><rect x="456" y="248.0" width="90" height="10.0" rx="0" class="c1" tabindex="0" data-tip="High: Producer top-ups $2.0B"/><rect x="456" y="107.6" width="90" height="138.4" rx="0" class="c2" tabindex="0" data-tip="High: Retail subsidy $23.4B"/><rect x="456" y="54.2" width="90" height="51.4" rx="0" class="c3" tabindex="0" data-tip="High: Household supplement $8.9B"/><rect x="456" y="41.6" width="90" height="10.6" rx="4" class="c4" tabindex="0" data-tip="High: Administration $2.1B"/><text x="501.0" y="34.2" class="tot" text-anchor="middle">$36.3B</text><text x="501.0" y="280" class="ax" text-anchor="middle">High</text><line x1="56" x2="630" y1="247.4" y2="247.4" class="ref"/></svg><ul class="legend"><li><i class="k c1"></i>Producer top-ups</li><li><i class="k c2"></i>Retail subsidy</li><li><i class="k c3"></i>Household supplement</li><li><i class="k c4"></i>Administration</li><li><i class="k dash"></i>Grocery benefit, about $2.1B a year</li></ul><p class="src">Illustrative estimates. Assumptions in Appendix A. The table above gives the same figures. Grocery benefit average from the PBO estimate.<sup class="fn"><a href="#n32">32</a></sup></p></figure>
+<p><strong>Comparison with the grocery benefit.</strong> The Parliamentary Budget Officer estimates the Canada Groceries and Essentials Benefit will cost $12.4 billion from 2025-26 to 2030-31, or about $2.1 billion a year on average.<sup class="fn"><a href="#n32" id="r32-39" title="Institute for Research on Public Policy, Canada Groceries and Essentials Benefit, citing the Parliamentary Budget Officer&#x27;s estimate of $12.4 billion over 2025-26 to 2030-31.">32</a></sup> The low scenario costs somewhat more than that. The middle scenario costs about seven times as much, and the high scenario about seventeen times as much. In return, the guarantee does what the benefit cannot: it fixes the price of basic food, stabilizes farm income, and sizes household support to the real cost of eating.</p>
+<p><strong>What existing programs could cover.</strong> Part of the cost can be met by redirecting existing spending. The grocery benefit top-up, about $2.1 billion a year, overlaps directly with the household supplement.<sup class="fn"><a href="#n32" id="r32-40" title="Institute for Research on Public Policy, Canada Groceries and Essentials Benefit, citing the Parliamentary Budget Officer&#x27;s estimate of $12.4 billion over 2025-26 to 2030-31.">32</a></sup> Federal and provincial farm risk programs pay producers more than $1.8 billion a year on average, including about $363 million through AgriStability.<sup class="fn"><a href="#n33" id="r33-41" title="Agriculture and Agri-Food Canada, Question Period Note: Business Risk Management Programs.">33</a></sup> Only part of that could shift, since those programs cover all farm sectors, but producer top-ups would overlap mainly with AgriStability. Together, realistic transfers come to roughly $2.5 billion to $3 billion a year. That covers most of the low estimate, about a fifth of the middle estimate and less than a tenth of the high one. The retail subsidy has no existing program to draw from. The rest would be new public spending.</p>
+<p><strong>What drives the cost.</strong> The retail subsidy is the largest and least certain item. It depends almost entirely on how much ordinary grocery shopping shifts to capped products, since anyone can buy them. Three design choices keep it in check: a short list of plain, unbranded staples; reasonable limits on quantities per purchase; and a subsidy rate that falls as supply costs fall. The pilots should measure this shift before anything else.</p>
+<h2 id="7-implementation">7. Implementation</h2>
+<h3 id="71-governance">7.1 Governance</h3>
+<p>An independent public body would set producer floors and retail caps, assess efficient supply costs, audit claims and publish all accounts. Federal, provincial and territorial governments would need to agree on funding, administration and enforcement. Indigenous participation should be designed with the communities concerned, including support for local food systems.</p>
+<h3 id="72-pilots">7.2 Pilots</h3>
+<p>Canada should begin with a limited basket and pilots covering different conditions: a major city, a smaller community and a remote region. The pilots should measure, before anything else, how much shopping shifts to capped products, what the real supply cost of the basket is, and how much of each subsidy dollar reaches the shelf price. A full, independently costed budget should be completed before national expansion.</p>
+<h3 id="73-competition">7.3 Competition</h3>
+<p>The program should support competition by allowing cooperatives, independent grocers and new suppliers to take part on fair terms. It can build on the food hubs being funded under the National Food Security Strategy.</p>
+<h3 id="74-review">7.4 Review</h3>
+<p>Maximum retail prices would be reviewed on a regular schedule, with exceptional changes in fuel, harvests or imports triggering an earlier review. Producer guarantees should provide stability while still allowing necessary adjustments.</p>
+<h3 id="75-targets-and-evaluation">7.5 Targets and evaluation</h3>
+<p>The program should set a public target for reducing household food insecurity, with a date to reach it. Success would be measured through household food insecurity, food bank use, the actual cost and availability of the basket, producer viability, the share of each subsidy dollar that reaches the shelf price, and public expenditure. An independent evaluation should establish whether households receive the intended benefit and whether the system improves on simpler alternatives. Higher farm returns and lower posted prices would mean little if people still went hungry.</p>
+<h2 id="8-conclusion">8. Conclusion</h2>
+<p>The principle behind this proposal can be stated simply. People who produce essential food should receive a viable return. Businesses that distribute it should meet a defined public obligation. Households should have the means to buy it. Other countries have tried parts of this, and their failures point to where the safeguards belong. Canada already has some of the tools. The next step is to connect them around one measurable guarantee: that everyone in Canada can afford to buy an adequate diet.</p>
+<h2 id="appendix-a-costing-method-and-assumptions">Appendix A: Costing method and assumptions</h2>
+<p>The estimates in Section 6 are illustrative. Each rests on stated assumptions that readers can test and change.</p>
+<p><strong>Cost of one person's basket.</strong> A nutritious food basket for a family of four in Windsor-Essex cost about $271 a week in 2025, or about $68 per person.<sup class="fn"><a href="#n34" id="r34-42" title="CTV News Windsor, Cost to put food on the table hits $271 per week for a family of four: WECHU report, November 21, 2025.">34</a></sup> That basket includes meat, fish and a wide range of products. A basket limited to staples should cost much less. The estimates use $30, $40 and $50 per person per week, at efficient supply cost. A priced basket built from Statistics Canada's average retail prices would firm up this figure and should be the first refinement.</p>
+<p><strong>Volume sold under the cap.</strong> Anyone can buy the capped products, so the volume sold matters more than any other number. It is measured in full baskets per week, expressed as people fed: 10 million, 20 million or 30 million, out of a population of about 41.8 million.<sup class="fn"><a href="#n35" id="r35-43" title="Statistics Canada, Canada&#x27;s population estimates, second quarter 2026.">35</a></sup></p>
+<p><strong>Retail subsidy.</strong> The gap between efficient supply cost and the capped shelf price: 10, 20 or 30 per cent. This sets the capped price at about $27, $32 and $35 per person per week.</p>
+<p><strong>Producer top-ups.</strong> Farm prices are assumed to make up about a quarter of the basket's supply cost. In an average year, top-ups are assumed to add 2, 5 or 10 per cent to that farm value. In many years prices will sit above the floor and no top-up will be paid.</p>
+<p><strong>Household supplement.</strong> Paid to 5 million, 7.5 million or 9.8 million people, covering 25, 40 or 50 per cent of their basket at the capped price. The upper figure equals everyone currently in a food-insecure household.</p>
+<p><strong>Administration.</strong> 4, 5 or 6 per cent of program spending.</p>
+<p><strong>Formulas.</strong></p>
+<ul>
+<li>Total basket spending = people fed × weekly cost × 52</li>
+<li>Retail subsidy = total basket spending × subsidy gap</li>
+<li>Producer top-ups = total basket spending × farm share × top-up rate</li>
+<li>Household supplement = eligible people × capped weekly price × 52 × share covered</li>
+<li>Administration = (retail subsidy + producer top-ups + household supplement) × admin rate</li>
+</ul>
+<p><strong>Avoiding double counting.</strong> Each dollar is counted once. The retail subsidy is calculated on supply costs that use the actual market price paid to farmers, so it never includes the producer top-up. The household supplement is calculated on the capped shelf price, after the retail subsidy has already lowered it.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>Low</th>
+<th>Middle</th>
+<th>High</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>People fed under the cap</td>
+<td>10 million</td>
+<td>20 million</td>
+<td>30 million</td>
+</tr>
+<tr>
+<td>Supply cost per person per week</td>
+<td>$30</td>
+<td>$40</td>
+<td>$50</td>
+</tr>
+<tr>
+<td>Retail subsidy gap</td>
+<td>10%</td>
+<td>20%</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Farm share of supply cost</td>
+<td>25%</td>
+<td>25%</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>Average producer top-up rate</td>
+<td>2%</td>
+<td>5%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>People receiving the supplement</td>
+<td>5 million</td>
+<td>7.5 million</td>
+<td>9.8 million</td>
+</tr>
+<tr>
+<td>Share of capped basket covered</td>
+<td>25%</td>
+<td>40%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Administration rate</td>
+<td>4%</td>
+<td>5%</td>
+<td>6%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="about">About the author</h2><p>Edward Yersh is a railyard worker and essayist in Montreal. He publishes on Substack as Mister Edwards and holds a Bachelor of Arts from McGill University.</p>
+<h2 id="notes">Notes</h2><ol class="notes"><li id="n1">United Nations, <a target="_blank" rel="noopener" href="https://www.un.org/en/about-us/universal-declaration-of-human-rights">Universal Declaration of Human Rights</a>, Article 25. <a class="back" href="#r1-1" aria-label="Back to text">&#8617;</a></li><li id="n2">United Nations Office of the High Commissioner for Human Rights, <a target="_blank" rel="noopener" href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights">International Covenant on Economic, Social and Cultural Rights</a>, Article 11. <a class="back" href="#r2-2" aria-label="Back to text">&#8617;</a></li><li id="n3">Food and Agriculture Organization, <a target="_blank" rel="noopener" href="https://www.fao.org/right-to-food-around-the-globe/countries/can/en/">Right to food around the globe: Canada</a>. <a class="back" href="#r3-3" aria-label="Back to text">&#8617;</a></li><li id="n4">Statistics Canada, <a target="_blank" rel="noopener" href="https://www150.statcan.gc.ca/n1/daily-quotidien/260429/dq260429a-eng.htm">Canadian Income Survey, 2024</a>, April 29, 2026. <a class="back" href="#r4-4" aria-label="Back to text">&#8617;</a></li><li id="n5">The Salvation Army, <a target="_blank" rel="noopener" href="https://www.newswire.ca/news-releases/salvation-army-report-finds-nearly-one-in-three-canadians-skipping-meals-as-food-insecurity-hits-four-year-high-819879450.html">Salvation Army report finds nearly one in three Canadians skipping meals as food insecurity hits four-year high</a>, November 3, 2026. Survey of 1,525 adults by Edelman Data and Intelligence through the Angus Reid Forum, September 11 to 18, 2026. See also The Canadian Press, <a target="_blank" rel="noopener" href="https://calgaryjournal.ca/2026/11/03/more-canadians-report-skipping-meals-because-they-cant-afford-groceries-survey/">More Canadians report skipping meals because they can't afford groceries: survey</a>, November 3, 2026. <a class="back" href="#r5-5" aria-label="Back to text">&#8617;</a></li><li id="n6">Food Banks Canada, <a target="_blank" rel="noopener" href="https://foodbankscanada.ca/press-releases/canadas-2025-hungercount-shows-the-cost-of-inaction/">Canada's 2025 HungerCount shows the cost of inaction</a>. <a class="back" href="#r6-6" aria-label="Back to text">&#8617;</a></li><li id="n7">Prime Minister of Canada, <a target="_blank" rel="noopener" href="https://www.pm.gc.ca/en/news/news-releases/2026/06/11/prime-minister-carney-launches-national-food-security-strategy">Prime Minister Carney launches National Food Security Strategy</a>, June 11, 2026. <a class="back" href="#r7-8" aria-label="Back to text">&#8617;</a></li><li id="n8">Office of the Auditor General of Canada, <a target="_blank" rel="noopener" href="https://www.oag-bvg.gc.ca/internet/English/osh_20150323_e_40289.html">Opening Statement on Nutrition North Canada, 2014 Fall Report</a>. <a class="back" href="#r8-9" aria-label="Back to text">&#8617;</a></li><li id="n9">Canadian Food Inspection Agency, <a target="_blank" rel="noopener" href="https://inspection.canada.ca/en/food-labels/labelling/industry/grain-and-bakery-products/unenriched-flour">Prohibition against the sale of unenriched white flour and products containing unenriched flour</a>. <a class="back" href="#r9-11" aria-label="Back to text">&#8617;</a></li><li id="n10">Statistics Canada, <a target="_blank" rel="noopener" href="https://www.statcan.gc.ca/en/sc/podcasts/eh-sayers-ep35">Eh Sayers, Episode 35: Canada's pulse production</a>. <a class="back" href="#r10-12" aria-label="Back to text">&#8617;</a></li><li id="n11">Health Canada, <a target="_blank" rel="noopener" href="https://www.canada.ca/en/health-canada/services/fortified-food/canadas-approach.html">Fortified foods: Canada's approach to fortification</a>. <a class="back" href="#r11-13" aria-label="Back to text">&#8617;</a></li><li id="n12">Canola Council of Canada, <a target="_blank" rel="noopener" href="https://www.canolacouncil.org/media/512767/canola_oil_fact_sheet.pdf">Canola oil fact sheet</a>. <a class="back" href="#r12-14" aria-label="Back to text">&#8617;</a></li><li id="n13">Health Canada, <a target="_blank" rel="noopener" href="https://food-guide.canada.ca/applying-guidelines/considerations-vegetarian-diets">Canada's food guide: Considerations for vegetarian diets</a>. <a class="back" href="#r13-15" aria-label="Back to text">&#8617;</a></li><li id="n14">Health Canada, <a target="_blank" rel="noopener" href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/national-nutritious-food-basket.html">National Nutritious Food Basket</a>. <a class="back" href="#r14-16" aria-label="Back to text">&#8617;</a></li><li id="n15">Agriland, <a target="_blank" rel="noopener" href="https://www.agriland.co.uk/farming-news/end-of-milk-quotas-why-dairy-quotas-were-introduced/">Milk quotas to end within days, but why were they introduced?</a>, March 25, 2015. <a class="back" href="#r15-17" aria-label="Back to text">&#8617;</a></li><li id="n16">Government of India, Indian Economic Service, <a target="_blank" rel="noopener" href="https://ies.gov.in/arthapedia/concept/minimum-support-prices">Minimum Support Prices</a>. <a class="back" href="#r16-18" aria-label="Back to text">&#8617;</a></li><li id="n17">Down To Earth, <a target="_blank" rel="noopener" href="https://www.downtoearth.org.in/news/agriculture/bumper-kharif-amid-excess-stock-is-india-staring-at-hard-agri-decisions-73491">Bumper kharif amid excess stock? Is India staring at hard agri decisions</a>, September 22, 2020, citing the Commission for Agricultural Costs and Prices. <a class="back" href="#r17-19" aria-label="Back to text">&#8617;</a></li><li id="n18">Jorge Miranda, <a target="_blank" rel="noopener" href="https://regulatingforglobalization.com/2019/02/25/mexicos-new-agricultural-policy-is-mexicos-old-agricultural-policy-part-i/">Mexico's new agricultural policy is Mexico's old agricultural policy, Part I</a>, Kluwer Regulating for Globalization, February 25, 2019. <a class="back" href="#r18-20" aria-label="Back to text">&#8617;</a></li><li id="n19">Expansión Política, <a target="_blank" rel="noopener" href="https://politica.expansion.mx/presidencia/2023/06/29/fraude-segalmex-fue-9-500-mdp-sfp">Fraude en Segalmex fue de 9,500 mdp: SFP</a>, June 29, 2023. <a class="back" href="#r19-22" aria-label="Back to text">&#8617;</a></li><li id="n20">Government of India, <a target="_blank" rel="noopener" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2294446&amp;lang=1&amp;reg=3">Minimum Support Prices for All Crops</a>, August 4, 2026. <a class="back" href="#r20-23" aria-label="Back to text">&#8617;</a></li><li id="n21">Government of India, <a target="_blank" rel="noopener" href="https://ies.gov.in/arthapedia/concept/fair-price-shop-fps">Fair Price Shops</a> and <a target="_blank" rel="noopener" href="https://dfpd.gov.in/food-subsidy/en">Food Subsidy</a>. <a class="back" href="#r21-24" aria-label="Back to text">&#8617;</a></li><li id="n22">Uno TV, <a target="_blank" rel="noopener" href="https://www.unotv.com/nacional/maiz-frijol-y-leche-asi-quedan-los-nuevos-precios-de-garantia-publicados-por-sader/">Maíz, frijol y leche: así quedan los nuevos precios de garantía publicados por Sader</a>, October 2025. <a class="back" href="#r22-25" aria-label="Back to text">&#8617;</a></li><li id="n23">Cultura Colectiva, <a target="_blank" rel="noopener" href="https://news.culturacolectiva.com/noticias/mexico/pacic-2026-24-productos-basicos-910-pesos-inflacion-mexico/">PACIC 2026: 24 productos básicos a 910 pesos</a>. <a class="back" href="#r23-26" aria-label="Back to text">&#8617;</a></li><li id="n24">Government of Malaysia, <a target="_blank" rel="noopener" href="https://ihsanmadani.gov.my/inisiatif/makanan/program-skim-penstabilan-harga-minyak-masak-coss-0">Cooking Oil Stabilization Scheme (COSS)</a>. <a class="back" href="#r24-27" aria-label="Back to text">&#8617;</a></li><li id="n25">Canadian Dairy Commission, <a target="_blank" rel="noopener" href="https://www.cdc-ccl.ca/en/2026-increase-farmgate-milk-price-aligned-inflation">2026 increase to farmgate milk price aligned with inflation</a>. <a class="back" href="#r25-28" aria-label="Back to text">&#8617;</a></li><li id="n26">Government of Canada, <a target="_blank" rel="noopener" href="https://www.nutritionnordcanada.gc.ca/eng/1415538638170/1415538670874">How Nutrition North Canada works</a>. <a class="back" href="#r26-29" aria-label="Back to text">&#8617;</a></li><li id="n27">US Department of Health and Human Services, <a target="_blank" rel="noopener" href="https://odphp.health.gov/foodismedicine/federal-resource-hub/supplemental-nutrition-assistance-program-snap">Supplemental Nutrition Assistance Program</a>. <a class="back" href="#r27-30" aria-label="Back to text">&#8617;</a></li><li id="n28">BNN Bloomberg, <a target="_blank" rel="noopener" href="https://www.bnnbloomberg.ca/orban-s-food-price-caps-backfire-for-hungarian-holiday-shoppers-1.1861244">Orbán's food price caps backfire for Hungarian holiday shoppers</a>, December 2022. <a class="back" href="#r28-34" aria-label="Back to text">&#8617;</a></li><li id="n29">University of Toronto Mississauga, <a target="_blank" rel="noopener" href="https://www.utm.utoronto.ca/main-news/grocers-fail-pass-along-full-nutrition-north-food-subsidy-shoppers-study-shows">Grocers fail to pass along full Nutrition North food subsidy to shoppers, study shows</a>. <a class="back" href="#r29-36" aria-label="Back to text">&#8617;</a></li><li id="n30">Cabin Radio, <a target="_blank" rel="noopener" href="https://cabinradio.ca/182166/news/economy/food/north-west-company-defends-use-of-nutrition-north-funding/">North West Company defends use of Nutrition North funding</a>. <a class="back" href="#r30-37" aria-label="Back to text">&#8617;</a></li><li id="n31">The Canadian Press via BNN Bloomberg, <a target="_blank" rel="noopener" href="https://www.bnnbloomberg.ca/tariffs/2026/06/18/supply-management-costs-canadians-average-of-244-per-year-mei-study-finds/">Supply management costs Canadians average of $244 per year, MEI study finds</a>, June 18, 2026. <a class="back" href="#r31-38" aria-label="Back to text">&#8617;</a></li><li id="n32">Institute for Research on Public Policy, <a target="_blank" rel="noopener" href="https://irpp.org/research-studies/canada-groceries-essentials-benefit/">Canada Groceries and Essentials Benefit</a>, citing the Parliamentary Budget Officer's estimate of $12.4 billion over 2025-26 to 2030-31. <a class="back" href="#r32-39" aria-label="Back to text">&#8617;</a></li><li id="n33">Agriculture and Agri-Food Canada, <a target="_blank" rel="noopener" href="https://search.open.canada.ca/qpnotes/record/aafc-aac%2CAAFC-2025-QP-00002">Question Period Note: Business Risk Management Programs</a>. <a class="back" href="#r33-41" aria-label="Back to text">&#8617;</a></li><li id="n34">CTV News Windsor, <a target="_blank" rel="noopener" href="https://www.ctvnews.ca/windsor/article/cost-to-put-food-on-the-table-hits-271-per-week-for-a-family-of-four-wechu-report/">Cost to put food on the table hits $271 per week for a family of four: WECHU report</a>, November 21, 2025. <a class="back" href="#r34-42" aria-label="Back to text">&#8617;</a></li><li id="n35">Statistics Canada, <a target="_blank" rel="noopener" href="https://www150.statcan.gc.ca/n1/daily-quotidien/260923/dq260923b-eng.htm">Canada's population estimates, second quarter 2026</a>. <a class="back" href="#r35-43" aria-label="Back to text">&#8617;</a></li></ol>
+<p class="foot">Comments, corrections and criticism are welcome through <a href="https://github.com/Edulus/food-guarantee/issues">GitHub Issues</a>.</p>
+</main></div>
+<div id="tip" role="tooltip"></div>
+<script>
+const tip=document.getElementById('tip');
+document.querySelectorAll('[data-tip]').forEach(el=>{
+ const show=e=>{tip.textContent=el.dataset.tip;tip.style.opacity=1;const r=el.getBoundingClientRect();
+  const x=(e&&e.clientX)?e.clientX:r.left+r.width/2, y=(e&&e.clientY)?e.clientY:r.top;
+  tip.style.left=Math.min(x+12,innerWidth-tip.offsetWidth-8)+'px';tip.style.top=(y-36)+'px';el.classList.add('hot')};
+ const hide=()=>{tip.style.opacity=0;el.classList.remove('hot')};
+ el.addEventListener('mousemove',show);el.addEventListener('focus',()=>show());el.addEventListener('mouseleave',hide);el.addEventListener('blur',hide);
+});
+</script>
+</body></html>
