@@ -189,15 +189,14 @@ The record points to seven recurring failures.
 
 ### 5.4 Safeguards in this design
 
-| Failure | Where it happened | Safeguard in this proposal |
-|---|---|---|
-| Surpluses | Europe, India | Guarantee covers only the volume the basket needs, plus a reserve |
-| Distorted farming | India | Varied basket; volumes set by nutrition needs; annual review |
-| Benefits to the wrong farms | India | Per-farm volume cap, following Mexico |
-| Corruption | Mexico | Independent price-setting body; top-up payments instead of mass public buying; audited and published accounts |
-| Empty shelves | Hungary | Retailers paid the cost gap; mandatory stocking with penalties; substitutes required |
-| Subsidies kept by retailers | Nutrition North | Fixed, published shelf price; subsidy pays only the audited cost gap; open cost records |
-| Hidden costs | Canadian supply management | Producer support paid from public funds and recorded in public accounts |
+| Program and years | Where | What went wrong | Safeguard in this proposal |
+|---|---|---|---|
+| Common Agricultural Policy dairy price guarantees; surpluses in the 1970s and 1980s, quotas from 1984 to 2015[15] | European Community | Surpluses: more than a million tonnes of butter and milk powder in public storage | Guarantee covers only the volume the basket needs, plus a reserve |
+| Minimum Support Prices and public procurement, 1965 to present[16] | India | Surpluses, with stocks over three times the reserve target in 2020; buying concentrated on rice and wheat in regions with depleted groundwater; benefits concentrated in Punjab and Haryana[17] | Volume cap; varied basket with volumes set by nutrition needs; annual review; per-farm volume cap, following Mexico's current program |
+| Segalmex, 2019 to 2025[18][32] | Mexico | Corruption: about 9.5 billion pesos lost through inflated purchases and contracts with shell companies[19] | Independent price-setting body; top-up payments instead of mass public buying; audited and published accounts |
+| Food price caps, February 2022 to July 2023[33][34] | Hungary | Capped products ran short and some chains rationed them; caps paid for by retailers[28] | Retailers paid the cost gap; mandatory stocking with penalties; substitutes required |
+| Nutrition North Canada, 2011 to present[29] | Canada | Subsidies only partly reaching shoppers, by research estimates; pass-through never verified, according to the Auditor General in 2014[8] | Fixed, published shelf price; subsidy pays only the audited cost gap; open cost records |
+| Supply management for dairy, eggs and poultry, national agencies created from 1966 to 1978[35] | Canada | Support for farm incomes built partly into consumer prices[31] | Producer support paid from public funds and recorded in public accounts |
 
 Market concentration needs specific attention. Where one chain dominates a town or region, it has more room to inflate costs and less pressure to keep shelves stocked. In those places, cost benchmarks would be set from comparable regions, inspections would be more frequent, and government would be ready to fund a cooperative or public alternative.
 
@@ -217,9 +216,9 @@ The estimates keep two numbers apart. **Total basket spending** is the full cost
 | **Total public cost** | **$3.5 billion** | **$14.5 billion** | **$36.3 billion** |
 | Per Canadian, per year | $84 | $347 | $869 |
 
-**Comparison with the grocery benefit.** The Parliamentary Budget Officer estimates the Canada Groceries and Essentials Benefit will cost $12.4 billion from 2025-26 to 2030-31, or about $2.1 billion a year on average.[32] The low scenario costs somewhat more than that. The middle scenario costs about seven times as much, and the high scenario about seventeen times as much. In return, the guarantee does what the benefit cannot: it fixes the price of basic food, stabilizes farm income, and sizes household support to the real cost of eating.
+**Comparison with the grocery benefit.** The Parliamentary Budget Officer estimates the Canada Groceries and Essentials Benefit will cost $12.4 billion from 2025-26 to 2030-31, or about $2.1 billion a year on average.[36] The low scenario costs somewhat more than that. The middle scenario costs about seven times as much, and the high scenario about seventeen times as much. In return, the guarantee does what the benefit cannot: it fixes the price of basic food, stabilizes farm income, and sizes household support to the real cost of eating.
 
-**What existing programs could cover.** Part of the cost can be met by redirecting existing spending. The grocery benefit top-up, about $2.1 billion a year, overlaps directly with the household supplement.[32] Federal and provincial farm risk programs pay producers more than $1.8 billion a year on average, including about $363 million through AgriStability.[33] Only part of that could shift, since those programs cover all farm sectors, but producer top-ups would overlap mainly with AgriStability. Together, realistic transfers come to roughly $2.5 billion to $3 billion a year. That covers most of the low estimate, about a fifth of the middle estimate and less than a tenth of the high one. The retail subsidy has no existing program to draw from. The rest would be new public spending.
+**What existing programs could cover.** Part of the cost can be met by redirecting existing spending. The grocery benefit top-up, about $2.1 billion a year, overlaps directly with the household supplement.[36] Federal and provincial farm risk programs pay producers more than $1.8 billion a year on average, including about $363 million through AgriStability.[37] Only part of that could shift, since those programs cover all farm sectors, but producer top-ups would overlap mainly with AgriStability. Together, realistic transfers come to roughly $2.5 billion to $3 billion a year. That covers most of the low estimate, about a fifth of the middle estimate and less than a tenth of the high one. The retail subsidy has no existing program to draw from. The rest would be new public spending.
 
 **What drives the cost.** The retail subsidy is the largest and least certain item. It depends almost entirely on how much ordinary grocery shopping shifts to capped products, since anyone can buy them. Three design choices keep it in check: a short list of plain, unbranded staples; reasonable limits on quantities per purchase; and a subsidy rate that falls as supply costs fall. The pilots should measure this shift before anything else.
 
@@ -229,9 +228,9 @@ The cost of the guarantee should be weighed against what food insecurity already
 
 ### 7.1 Health care
 
-The strongest evidence concerns health care. A study published in the Canadian Medical Association Journal in 2015 followed 67,033 Ontario adults aged 18 to 64. After adjusting for income, education and other factors, it found that annual health care costs, excluding most prescription drugs, were higher for adults in food-insecure households: 16 per cent ($235) higher for marginal food insecurity, 32 per cent ($455) higher for moderate, and 76 per cent ($1,092) higher for severe.[34] A later national study found that among adults who died prematurely, those in severely food-insecure households died about nine years earlier than those in food-secure households.[35]
+The strongest evidence concerns health care. A study published in the Canadian Medical Association Journal in 2015 followed 67,033 Ontario adults aged 18 to 64. After adjusting for income, education and other factors, it found that annual health care costs, excluding most prescription drugs, were higher for adults in food-insecure households: 16 per cent ($235) higher for marginal food insecurity, 32 per cent ($455) higher for moderate, and 76 per cent ($1,092) higher for severe.[38] A later national study found that among adults who died prematurely, those in severely food-insecure households died about nine years earlier than those in food-secure households.[39]
 
-These figures allow a rough estimate. The most recent available national breakdown counts about 2.5 million people in marginally food-insecure households, 4.8 million in moderately food-insecure households and 2.6 million in severely food-insecure households.[36] About three quarters of people in food-insecure households are adults.[37] Applying the Ontario cost differences to adults only gives roughly $4.2 billion a year in additional health care costs, in 2012 dollars. The figure in today's dollars would be higher, and it leaves out most prescription drug costs.
+These figures allow a rough estimate. The most recent available national breakdown counts about 2.5 million people in marginally food-insecure households, 4.8 million in moderately food-insecure households and 2.6 million in severely food-insecure households.[40] About three quarters of people in food-insecure households are adults.[41] Applying the Ontario cost differences to adults only gives roughly $4.2 billion a year in additional health care costs, in 2012 dollars. The figure in today's dollars would be higher, and it leaves out most prescription drug costs.
 
 Two cautions apply. First, the study measures an association. Some of the extra cost reflects illness that makes it harder to work and buy food, and would remain even if food insecurity ended. Second, no program is likely to end food insecurity completely, since its causes include rent, debt and income as well as food prices.
 
@@ -247,11 +246,11 @@ On these assumptions, health care savings would offset part of the cost: about 1
 
 ### 7.2 Children and learning
 
-About 2.4 million children live in food-insecure households.[37] The research on how food affects learning is less precise than the research on health. A Cochrane review of 40 school feeding studies, covering about 91,000 students, found small gains in mathematics and enrolment, little or no effect on reading and attendance, and slight gains in growth. Most of the studies were done in lower-income countries, and the reviewers caution against applying the results elsewhere.[38] The expected effect on learning in Canada is likely positive and modest. This paper does not attempt to put a dollar figure on it.
+About 2.4 million children live in food-insecure households.[41] The research on how food affects learning is less precise than the research on health. A Cochrane review of 40 school feeding studies, covering about 91,000 students, found small gains in mathematics and enrolment, little or no effect on reading and attendance, and slight gains in growth. Most of the studies were done in lower-income countries, and the reviewers caution against applying the results elsewhere.[42] The expected effect on learning in Canada is likely positive and modest. This paper does not attempt to put a dollar figure on it.
 
 ### 7.3 Food-related theft
 
-Evidence on crime is narrow. Studies of the American SNAP program found that grocery store theft rose late in the month, as benefits ran out. When Illinois spread its payments across the month, grocery store theft fell by about 21 per cent.[39] This supports a limited conclusion: steadier access to food appears to reduce food-related theft. There is no Canadian evidence base that would support a national estimate.
+Evidence on crime is narrow. Studies of the American SNAP program found that grocery store theft rose late in the month, as benefits ran out. When Illinois spread its payments across the month, grocery store theft fell by about 21 per cent.[43] This supports a limited conclusion: steadier access to food appears to reduce food-related theft. There is no Canadian evidence base that would support a national estimate.
 
 ### 7.4 Other returns
 
@@ -295,9 +294,9 @@ The principle behind this proposal can be stated simply. People who produce esse
 
 The estimates in Section 6 are illustrative. Each rests on stated assumptions that readers can test and change.
 
-**Cost of one person's basket.** A nutritious food basket for a family of four in Windsor-Essex cost about $271 a week in 2025, or about $68 per person.[40] That basket includes meat, fish and a wide range of products. A basket limited to staples should cost much less. The estimates use $30, $40 and $50 per person per week, at efficient supply cost. A priced basket built from Statistics Canada's average retail prices would firm up this figure and should be the first refinement.
+**Cost of one person's basket.** A nutritious food basket for a family of four in Windsor-Essex cost about $271 a week in 2025, or about $68 per person.[44] That basket includes meat, fish and a wide range of products. A basket limited to staples should cost much less. The estimates use $30, $40 and $50 per person per week, at efficient supply cost. A priced basket built from Statistics Canada's average retail prices would firm up this figure and should be the first refinement.
 
-**Volume sold under the cap.** Anyone can buy the capped products, so the volume sold matters more than any other number. It is measured in full baskets per week, expressed as people fed: 10 million, 20 million or 30 million, out of a population of about 41.8 million.[41]
+**Volume sold under the cap.** Anyone can buy the capped products, so the volume sold matters more than any other number. It is measured in full baskets per week, expressed as people fed: 10 million, 20 million or 30 million, out of a population of about 41.8 million.[45]
 
 **Retail subsidy.** The gap between efficient supply cost and the capped shelf price: 10, 20 or 30 per cent. This sets the capped price at about $27, $32 and $35 per person per week.
 
@@ -369,13 +368,17 @@ Edward Yersh is a railyard worker and essayist in Montreal. He publishes on Subs
 29. University of Toronto Mississauga, [Grocers fail to pass along full Nutrition North food subsidy to shoppers, study shows](https://www.utm.utoronto.ca/main-news/grocers-fail-pass-along-full-nutrition-north-food-subsidy-shoppers-study-shows).
 30. Cabin Radio, [North West Company defends use of Nutrition North funding](https://cabinradio.ca/182166/news/economy/food/north-west-company-defends-use-of-nutrition-north-funding/).
 31. The Canadian Press via BNN Bloomberg, [Supply management costs Canadians average of $244 per year, MEI study finds](https://www.bnnbloomberg.ca/tariffs/2026/06/18/supply-management-costs-canadians-average-of-244-per-year-mei-study-finds/), June 18, 2026.
-32. Institute for Research on Public Policy, [Canada Groceries and Essentials Benefit](https://irpp.org/research-studies/canada-groceries-essentials-benefit/), citing the Parliamentary Budget Officer's estimate of $12.4 billion over 2025-26 to 2030-31.
-33. Agriculture and Agri-Food Canada, [Question Period Note: Business Risk Management Programs](https://search.open.canada.ca/qpnotes/record/aafc-aac%2CAAFC-2025-QP-00002).
-34. Valerie Tarasuk and colleagues, [Association between household food insecurity and annual health care costs](https://www.cmaj.ca/content/187/14/E429), Canadian Medical Association Journal 187(14), 2015. Adjusted cost differences exclude Ontario Drug Benefit prescription costs.
-35. Fei Men, Craig Gundersen, Marcelo Urquia and Valerie Tarasuk, [Association between household food insecurity and mortality in Canada](https://proof.utoronto.ca/?p=4107), Canadian Medical Association Journal 192(3), 2020. Summary by PROOF, University of Toronto.
-36. Community Food Centres Canada, [Food insecurity and poverty in Canada: key findings from the 2023 Canadian Income Survey](https://cfccanada.ca/CFCC/media/assets/PAU-Briefing-Note-CIS-2023.pdf), May 2025.
-37. PROOF, University of Toronto, [Household food insecurity in Canada](https://proof.utoronto.ca/foodinsecurity), reporting 9.8 million people, including 2.4 million children, in food-insecure households in 2025.
-38. Cochrane, [School feeding programs lead to modest but meaningful results](https://iran.cochrane.org/news/school-feeding-programs-lead-modest-meaningful-results), summary of a Cochrane systematic review of 40 studies.
-39. Purdue University Daniels School of Business, [SNAP benefits and crime](https://business.purdue.edu/news/features/2022/snap.php), summarizing Jillian Carr and Analisa Packham, "SNAP Benefits and Crime: Evidence from Changing Disbursement Schedules," Review of Economics and Statistics 101(2), 2019.
-40. CTV News Windsor, [Cost to put food on the table hits $271 per week for a family of four: WECHU report](https://www.ctvnews.ca/windsor/article/cost-to-put-food-on-the-table-hits-271-per-week-for-a-family-of-four-wechu-report/), November 21, 2025.
-41. Statistics Canada, [Canada's population estimates, second quarter 2026](https://www150.statcan.gc.ca/n1/daily-quotidien/260923/dq260923b-eng.htm).
+32. Luz Noticias, [Segalmex desaparece e inicia fusión con Diconsa para crear Alimentación para el Bienestar](https://www.luznoticias.mx/2025-01-22/agro/segalmex-desaparece-e-inicia-fusion-con-diconsa-para-crear-alimentacion-para-el-bienestar/232212), January 22, 2025. The merger decree took effect on January 21, 2025.
+33. Netherlands Ministry of Agriculture, Agroberichten Buitenland, [A new regulation will put a cap on the prices of seven basic food products](https://www.agroberichtenbuitenland.nl/actueel/nieuws/2022/01/14/hungary-food-price-caps), January 14, 2022.
+34. ESM Magazine, [Hungary to remove price caps on basic foodstuffs from 1 August](https://esmmagazine.com/retail/hungary-to-remove-price-caps-on-basic-foodstuffs-from-1-august-243540), June 22, 2023.
+35. Library of Parliament, [Supply Management in Canada](https://lop.parl.ca/sites/PublicWebsite/default/en_CA/ResearchPublications/200842E), Background Paper 2008-42-E.
+36. Institute for Research on Public Policy, [Canada Groceries and Essentials Benefit](https://irpp.org/research-studies/canada-groceries-essentials-benefit/), citing the Parliamentary Budget Officer's estimate of $12.4 billion over 2025-26 to 2030-31.
+37. Agriculture and Agri-Food Canada, [Question Period Note: Business Risk Management Programs](https://search.open.canada.ca/qpnotes/record/aafc-aac%2CAAFC-2025-QP-00002).
+38. Valerie Tarasuk and colleagues, [Association between household food insecurity and annual health care costs](https://www.cmaj.ca/content/187/14/E429), Canadian Medical Association Journal 187(14), 2015. Adjusted cost differences exclude Ontario Drug Benefit prescription costs.
+39. Fei Men, Craig Gundersen, Marcelo Urquia and Valerie Tarasuk, [Association between household food insecurity and mortality in Canada](https://proof.utoronto.ca/?p=4107), Canadian Medical Association Journal 192(3), 2020. Summary by PROOF, University of Toronto.
+40. Community Food Centres Canada, [Food insecurity and poverty in Canada: key findings from the 2023 Canadian Income Survey](https://cfccanada.ca/CFCC/media/assets/PAU-Briefing-Note-CIS-2023.pdf), May 2025.
+41. PROOF, University of Toronto, [Household food insecurity in Canada](https://proof.utoronto.ca/foodinsecurity), reporting 9.8 million people, including 2.4 million children, in food-insecure households in 2025.
+42. Cochrane, [School feeding programs lead to modest but meaningful results](https://iran.cochrane.org/news/school-feeding-programs-lead-modest-meaningful-results), summary of a Cochrane systematic review of 40 studies.
+43. Purdue University Daniels School of Business, [SNAP benefits and crime](https://business.purdue.edu/news/features/2022/snap.php), summarizing Jillian Carr and Analisa Packham, "SNAP Benefits and Crime: Evidence from Changing Disbursement Schedules," Review of Economics and Statistics 101(2), 2019.
+44. CTV News Windsor, [Cost to put food on the table hits $271 per week for a family of four: WECHU report](https://www.ctvnews.ca/windsor/article/cost-to-put-food-on-the-table-hits-271-per-week-for-a-family-of-four-wechu-report/), November 21, 2025.
+45. Statistics Canada, [Canada's population estimates, second quarter 2026](https://www150.statcan.gc.ca/n1/daily-quotidien/260923/dq260923b-eng.htm).
