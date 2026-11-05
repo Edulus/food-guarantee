@@ -187,7 +187,7 @@ The record points to seven recurring failures.
 
 **Costs hidden in consumer prices.** Critics of Canada's supply management system argue that it supports farm incomes partly by keeping consumer prices high. A June 2026 study by the Montreal Economic Institute, a market-oriented think tank, estimated the system costs consumers about $244 a year on average. It found the cost takes 1.25 per cent of disposable income from the poorest fifth of households, against 0.33 per cent for the richest fifth.[32] Defenders of supply management dispute such estimates. Either way, shoppers pay for the support without seeing it.
 
-### 5.4 Safeguards in this design
+### 5.4 Lessons from History
 
 | Program and years | Where | What went wrong | Safeguard in this proposal |
 |---|---|---|---|
